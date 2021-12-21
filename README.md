@@ -1,12 +1,12 @@
-# Docpkg
+# docmypkg
 
 The Node tool for building and publishing a docker container based on package information
 
-Install with `npm install docpkg`
+Install with `npm install docmypkg`
 
 ## Usage
 
-`docpkg [options]`
+`docmypkg [options]`
 
 ### Options
 
@@ -28,7 +28,7 @@ Can be configured via package.json
 {
   "name": "my-app",
   "version": "1.1.1",
-  "docpkg": {
+  "docmypkg": {
     "registry": "registry.my.com",
     "latest": true,
     "name": "app",
@@ -37,4 +37,4 @@ Can be configured via package.json
 }
 ```
 
-If the container `name` or `version` should be different place it in `docpkg`
+If the container `name` or `version` should be different place it in `docmypkg`

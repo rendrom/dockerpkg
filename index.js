@@ -3,7 +3,7 @@ const path = require('path');
 const chalk = require('chalk');
 const { spawn } = require('child_process');
 
-function docpkg(argv) {
+function docmypkg(argv) {
   const currentPath = process.cwd();
   const findPath = argv.p ? argv.p : '';
   const findDockerfile = argv.d;
@@ -30,9 +30,9 @@ function docpkg(argv) {
       pkg[key] = val;
     }
   }
-  if (pkg.docpkg) {
-    Object.assign(pkg, pkg.docpkg);
-    delete pkg.docpkg;
+  if (pkg.docmypkg) {
+    Object.assign(pkg, pkg.docmypkg);
+    delete pkg.docmypkg;
   }
   const { name, registry, version, latest } = pkg;
   const containerName = `${name}:${version}`;
@@ -185,4 +185,4 @@ function docpkg(argv) {
   }
 }
 
-module.exports = docpkg;
+module.exports = docmypkg;
