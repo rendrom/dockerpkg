@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const dockerpkg = require('./');
+const docpkg = require('./');
 const yargs = require('yargs/yargs');
 
 const argv = yargs(process.argv.slice(2))
@@ -45,4 +45,4 @@ const argv = yargs(process.argv.slice(2))
   .help('h')
   .alias('h', 'help').argv;
 
-dockerpkg(argv);
+docpkg(argv);
