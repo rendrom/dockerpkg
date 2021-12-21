@@ -31,9 +31,10 @@ Can be configured via package.json
   "dockerpkg": {
     "registry": "registry.my.com",
     "latest": true,
-    // if the container name or version should be different
     "name": "app",
     "version": "3.2.1"
   }
 }
 ```
+
+If the container `name` or `version` should be different place it in `dockerpkg`
